@@ -14,7 +14,7 @@ Use react query to create a infinite paginated list of people from the Star Wars
 
 */
 
-const fetchPeople = async ( {pageParam }): any => {
+const fetchPeople = async ( { pageParam }: { pageParam?: number }): Promise<any> => {
   const response = await fetch(`https://swapi.dev/api/people?page=${Number(pageParam)}`);
   const data = await response.json();
   return data;
@@ -26,8 +26,7 @@ const fetchHomeworld = async (url: string) => {
 export default function Home() {
 
 
-  const [homeworlds, setHomeworlds] = useState({});
-
+  const [homeworlds, setHomeworlds] = useState<{ [key: string]: string }>({});
   const {
     data,
     isLoading,
