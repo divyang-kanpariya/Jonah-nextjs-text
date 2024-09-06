@@ -1,4 +1,4 @@
-Deployed site : divyangkanpariya.netlify.app
+Deployed site : https://divyangkanpariya.netlify.app/
 
 
 
